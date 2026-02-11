@@ -3,7 +3,7 @@ import MainLayout from '../layouts/MainLayout';
 import { users, friendRequests, friendSuggestions, friends } from '../data/mockData';
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
+import { Input } from "../components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Link } from 'react-router-dom';
 import {

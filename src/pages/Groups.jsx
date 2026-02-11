@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import MainLayout from '../layouts/MainLayout';
 import { groups } from '../data/mockData';
 import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
+import { Input } from "../components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Link } from 'react-router-dom';
 import {

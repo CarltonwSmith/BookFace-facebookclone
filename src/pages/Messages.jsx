@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { conversations, messages as initialMessages, friends } from '../data/mockData';
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
-import { Input } from '../components/ui/input';
+import { Input } from "../components/ui/input";
 import { Button } from '../components/ui/button';
 import {
   Search,

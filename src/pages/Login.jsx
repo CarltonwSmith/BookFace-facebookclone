@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Input } from '../components/ui/input';
+import { Input } from "../components/ui/input";
 import { Button } from '../components/ui/button';
 import { Separator } from '../components/ui/separator';
 

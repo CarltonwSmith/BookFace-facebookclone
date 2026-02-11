@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import MainLayout from '../layouts/MainLayout';
 import { marketplaceItems } from '../data/mockData';
 import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
+import { Input } from "../components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '../components/ui/dialog';
 import {
