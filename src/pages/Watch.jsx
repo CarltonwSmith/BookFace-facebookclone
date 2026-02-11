@@ -10,7 +10,6 @@ import {
   Tv,
   Video,
   Bookmark,
-  Clock,
   Play,
   ThumbsUp,
   MessageCircle,
