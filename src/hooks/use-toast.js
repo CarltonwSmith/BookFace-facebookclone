@@ -1,4 +1,3 @@
-// src/hooks/use-toast.js
 import { useState, useCallback } from "react";
 
 export function useToast() {
