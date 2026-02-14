@@ -1,20 +1,20 @@
-import React, { useState } from "react";
+import { FacebookLayout } from "@/layouts/FacebookLayout";
+import { Sidebar } from "@/components/layout/Sidebar";
 import { CreatePost } from "@/components/CreatePost";
-import { CreatePostDialog } from "@/components/CreatePostDialog";
+import { StoriesRow } from "@/components/StoriesRow";
 
 export default function Home() {
-  const [open, setOpen] = useState(false);
-  const user = {
-    name: "Carlton Thompson",
-    firstName: "Carlton",
-    avatar: "/avatar.jpg",
-  };
-
   return (
-    <>
-      <CreatePost user={user} onOpen={() => setOpen(true)} />
-      <CreatePostDialog open={open} onOpenChange={setOpen} user={user} />
-      {/* feed posts below */}
-    </>
+    <FacebookLayout
+      sidebar={<Sidebar active="home" />}
+      main={
+        <>
+          <StoriesRow />
+          <CreatePost user={user} onOpen={() => setOpen(true)} />
+          <FeedPosts />
+        </>
+      }
+      right={<ContactsList />}
+    />
   );
 }
