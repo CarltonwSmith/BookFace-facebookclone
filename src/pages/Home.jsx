@@ -1,8 +1,6 @@
-import { FacebookLayout } from "@/layouts/FacebookLayout";
-import { Sidebar } from "@/components/layout/Sidebar";
-import { CreatePost } from "@/components/CreatePost";
-import { StoriesRow } from "@/components/StoriesRow";
 import React, { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
+import { StoriesRow } from "@/components/StoriesRow";
 import { CreatePost } from "@/components/CreatePost";
 import { CreatePostDialog } from "@/components/CreatePostDialog";
 
