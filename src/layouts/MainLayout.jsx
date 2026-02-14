@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Header from '../components/layout/Header';
-import Sidebar from '../components/layout/Sidebar';
+import { Sidebar } from "../components/layout/Sidebar";
 import RightSidebar from '../components/layout/RightSidebar';
 
 const MainLayout = ({ children, showRightSidebar = true, showLeftSidebar = true, fullWidth = false }) => {
