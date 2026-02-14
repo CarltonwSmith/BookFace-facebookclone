@@ -1,8 +1,11 @@
+// src/pages/Home.jsx
 import React, { useState } from "react";
+import { FacebookLayout } from "@/layouts/FacebookLayout";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { StoriesRow } from "@/components/StoriesRow";
-import { CreatePost } from "@/components/CreatePost";
-import { CreatePostDialog } from "@/components/CreatePostDialog";
+import { CreatePost } from "@/components/feed/CreatePost";
+import { CreatePostDialog } from "@/components/feed/CreatePostDialog";
+import { ContactsList } from "@/components/ContactsList";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -14,24 +17,14 @@ export default function Home() {
   };
 
   return (
-    <>
-      <CreatePost user={user} onOpen={() => setOpen(true)} />
-      <CreatePostDialog open={open} onOpenChange={setOpen} user={user} />
-      {/* FeedPosts and ContactsList go here */}
-    </>
-  );
-}
-
-
-export default function Home() {
-  return (
     <FacebookLayout
       sidebar={<Sidebar active="home" />}
       main={
         <>
           <StoriesRow />
           <CreatePost user={user} onOpen={() => setOpen(true)} />
-          <FeedPosts />
+          <CreatePostDialog open={open} onOpenChange={setOpen} user={user} />
+          {/* You can add <FeedPosts /> here later */}
         </>
       }
       right={<ContactsList />}

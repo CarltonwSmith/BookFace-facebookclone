@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import PostCard from '../components/feed/PostCard';
-import CreatePost from '../components/feed/CreatePost';
+import { CreatePost } from "../components/feed/CreatePost";
 import { users, posts, friends } from '../data/mockData';
 import { useAuth } from '../context/AuthContext';
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
