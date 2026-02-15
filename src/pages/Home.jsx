@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { FacebookLayout } from "@/layouts/FacebookLayout";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { StoriesRow } from "@/components/StoriesRow";
-import { CreatePost } from "@/components/CreatePost";
-import { CreatePostDialog } from "@/components/CreatePostDialog";
+import { CreatePost } from "@/components/feed/CreatePost";
+import { CreatePostDialog } from "@/components/feed/CreatePostDialog";
 import { ContactsList } from "@/components/ContactsList";
 
 export default function Home() {
