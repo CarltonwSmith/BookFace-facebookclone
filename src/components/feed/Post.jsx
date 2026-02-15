@@ -29,7 +29,7 @@ export function Post({ post }) {
       {/* Text */}
       {post.text && (
         <CardContent className="px-4 pb-2 text-gray-800">
-          <p>{post.text}</p>
+          <p className="line-clamp-4">{post.text}</p>
         </CardContent>
       )}
 

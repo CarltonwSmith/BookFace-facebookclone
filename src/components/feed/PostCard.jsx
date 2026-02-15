@@ -180,43 +180,11 @@ const PostCard = ({ post }) => {
       {/* Action Buttons */}
       <div className="border-t border-b border-gray-200 mx-4 py-1">
         <div className="flex items-center justify-around">
-          {/* Like Button with Reactions */}
-          <div
-            className="relative flex-1"
-            onMouseEnter={() => setShowReactions(true)}
-            onMouseLeave={() => setShowReactions(false)}
-          >
-            <button
-              onClick={() => handleReaction('like')}
-              className={`flex items-center justify-center gap-2 py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors w-full ${
-                userReaction ? currentReaction?.color : 'text-gray-500'
-              }`}
-            >
-              {userReaction ? (
-                <span className="text-lg">{currentReaction?.emoji}</span>
-              ) : (
-                <ThumbsUp className="w-5 h-5" />
-              )}
-              <span className="font-semibold text-sm">
-                {userReaction ? userReaction.charAt(0).toUpperCase() + userReaction.slice(1) : 'Like'}
-              </span>
-            </button>
-
-            {/* Reactions Popup */}
-            {showReactions && (
-              <div className="absolute bottom-full left-0 mb-2 flex items-center gap-1 bg-white rounded-full shadow-lg p-2 animate-in fade-in zoom-in duration-200">
-                {reactionEmojis.map((reaction) => (
-                  <button
-                    key={reaction.type}
-                    onClick={() => handleReaction(reaction.type)}
-                    className="w-10 h-10 flex items-center justify-center text-2xl hover:scale-125 transition-transform hover:bg-gray-100 rounded-full"
-                  >
-                    <div className="animate-bounce-in">{reaction.emoji}</div>
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+          {/* Like Button */}
+          <button className="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded-lg w-full justify-center">
+            <span className="animate-bounce-in text-blue-600 text-lg">👍</span>
+            Like
+          </button>
 
           <button
             onClick={() => setShowComments(!showComments)}
