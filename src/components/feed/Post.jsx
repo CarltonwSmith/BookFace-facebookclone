@@ -5,6 +5,7 @@ import { Avatar } from "@/components/ui/avatar";
 export function Post({ post }) {
   return (
     <Card className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      
       {/* Header */}
       <CardContent className="p-4 pb-2">
         <div className="flex items-center gap-3">
@@ -15,7 +16,6 @@ export function Post({ post }) {
           <div className="leading-tight">
             <p className="font-semibold text-gray-900">{post.user.name}</p>
             <p className="text-xs text-gray-500">
-              <p className="line-clamp-2">{post.text}</p>
               {post.time} · <span className="text-gray-400">🌍</span>
             </p>
           </div>
@@ -29,7 +29,7 @@ export function Post({ post }) {
       {/* Text */}
       {post.text && (
         <CardContent className="px-4 pb-2 text-gray-800">
-          <p className="line-clamp-4">{post.text}</p>
+          <p className="line-clamp-2">{post.text}</p>
         </CardContent>
       )}
 
@@ -48,7 +48,7 @@ export function Post({ post }) {
       <CardContent className="px-4 py-2">
         <div className="flex items-center justify-between text-sm text-gray-600">
           <div className="flex items-center gap-1">
-            <span className="text-blue-600 text-lg">👍</span>
+            <span className="animate-bounce-in text-blue-600 text-lg">👍</span>
             <span>{post.likes}</span>
           </div>
           <div>
@@ -62,12 +62,19 @@ export function Post({ post }) {
       {/* Action bar */}
       <CardContent className="px-4 py-1">
         <div className="flex justify-between text-gray-600 text-sm font-medium">
+          
+          {/* Like */}
           <button className="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded-lg w-full justify-center">
-            👍 Like
+            <span className="animate-bounce-in text-blue-600 text-lg">👍</span>
+            Like
           </button>
+
+          {/* Comment */}
           <button className="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded-lg w-full justify-center">
             💬 Comment
           </button>
+
+          {/* Share */}
           <button className="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded-lg w-full justify-center">
             ↗️ Share
           </button>
