@@ -19,8 +19,6 @@ import {
   X,
   Heart,
   Laugh,
-  Frown,
-  Angry,
   Send
 } from 'lucide-react';
 
