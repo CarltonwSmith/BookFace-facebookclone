@@ -1,10 +1,9 @@
-// src/pages/Home.jsx
 import React, { useState } from "react";
 import { FacebookLayout } from "@/layouts/FacebookLayout";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { StoriesRow } from "@/components/StoriesRow";
-import { CreatePost } from "@/components/feed/CreatePost";
-import { CreatePostDialog } from "@/components/feed/CreatePostDialog";
+import { CreatePost } from "@/components/CreatePost";
+import { CreatePostDialog } from "@/components/CreatePostDialog";
 import { ContactsList } from "@/components/ContactsList";
 
 export default function Home() {
@@ -24,7 +23,7 @@ export default function Home() {
           <StoriesRow />
           <CreatePost user={user} onOpen={() => setOpen(true)} />
           <CreatePostDialog open={open} onOpenChange={setOpen} user={user} />
-          {/* You can add <FeedPosts /> here later */}
+          {/* FeedPosts will go here */}
         </>
       }
       right={<ContactsList />}
