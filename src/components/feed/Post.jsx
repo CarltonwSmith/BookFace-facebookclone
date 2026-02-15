@@ -15,6 +15,7 @@ export function Post({ post }) {
           <div className="leading-tight">
             <p className="font-semibold text-gray-900">{post.user.name}</p>
             <p className="text-xs text-gray-500">
+              <p className="line-clamp-2">{post.text}</p>
               {post.time} · <span className="text-gray-400">🌍</span>
             </p>
           </div>

@@ -5,6 +5,7 @@ export function StoriesRow() {
   const stories = Array.from({ length: 5 });
 
   return (
+    <div className="scrollbar-hide flex overflow-x-auto">
     <div className="flex gap-3 overflow-x-auto pb-2">
       {stories.map((_, i) => (
         <Card

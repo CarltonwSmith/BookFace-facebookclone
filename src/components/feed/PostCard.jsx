@@ -213,7 +213,7 @@ const PostCard = ({ post }) => {
                     onClick={() => handleReaction(reaction.type)}
                     className="w-10 h-10 flex items-center justify-center text-2xl hover:scale-125 transition-transform hover:bg-gray-100 rounded-full"
                   >
-                    {reaction.emoji}
+                    <div className="animate-bounce-in">{reaction.emoji}</div>
                   </button>
                 ))}
               </div>

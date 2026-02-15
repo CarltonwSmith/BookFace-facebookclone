@@ -1,19 +1,23 @@
-import React from "react";
-import { Toaster } from "@/components/ui/toaster";
-import { useToast } from "@/hooks/use-toast";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Home from "./pages/Home";
+import { useToast } from "./hooks/useToast"; 
+import ToastContainer from "./components/ToastContainer";
 
 function App() {
-  const { toasts, toast } = useToast();
-
-  // Example: call toast({ title, description }) somewhere in your app
-  // toast({ title: "Post created", description: "Your post is now live." });
+  const { toasts } = useToast();
 
   return (
-    <>
-      {/* your routes / layout here */}
-
-      <Toaster toasts={toasts} />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+      <ToastContainer toasts={toasts} />
+    </Router>
   );
 }
 

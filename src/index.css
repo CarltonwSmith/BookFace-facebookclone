@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import "./App.css";
 body {
     background-color: #f0f2f5;
     margin: 0;
